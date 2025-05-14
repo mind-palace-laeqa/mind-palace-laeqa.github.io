@@ -62,6 +62,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 </section>
 
@@ -77,6 +78,9 @@
   
       </h2>
     </div>
+
+   
+
   </div>
 </section>
 
@@ -120,7 +124,39 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
+        <h2 class="title is-3">Long-term Active Embodied Question Answering</h2>
+
+        <div class="column is-centered has-text-centered">
+          <img src="./static/images/task.png"
+               class="interpolation-image"
+               alt="Problem setup."
+               style="width: 90%; height: auto;"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a new task called Long-term Active Embodied Question Answering (LA-EQA), where robots must both recall past experiences and actively explore their surroundings to answer complex questions. 
+            Compared to existing active EQA and episodic EQA tasks, LA-EQA unifies these settings and extends the problem to require reasoning over multiple past episodic memories accumulated over extended periods. 
+            To the best of our knowledge, this problem is largely unexplored, and no benchmark currently exists to evaluate it.
+          </p>
+
+        </div>
+        
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
         <h2 class="title is-3">Mind Palace Exploration</h2>
+
+                <div class="content has-text-justified">
+          <p>Humans use the mind palace technique to remember complex information by organizing it into a structured spatial memory, which enables efficient retrieval and traceable recall of relevant memories. We explore how this technique can be applied to long-term memory representation and reasoning in robots.</p>
+          
+
+        </div>
 
         <div class="column is-centered has-text-centered">
           <img src="./static/images/approach.png"
@@ -129,9 +165,65 @@
                style="width: 90%; height: auto;"/>
         </div>
         <div class="content has-text-justified">
+          <!-- <p>Humans use the mind palace technique to remember complex information by organizing it into a structured spatial memory, which enables efficient retrieval and traceable recall of relevant memories. We explore how this technique can be applied to long-term memory representation and reasoning in robots.</p> -->
+          
           <p>
-            Mind Palace Exploration builds a Robotic Mind Palace that unifies past memories and environment representation (1). Given a question (2), the agent alternates between reasoning over the question to identify a target object (3), planning a search strategy through memory retrieval and exploration (4), and updating its working memory (5), until it is ready to answer the question (6).
-         </p>
+            Mind Palace Exploration builds a Robotic Mind Palace that unifies past memories and environment representation (1). 
+            The Robotic Mind Palace summarizes the robot’s history of observations into multiple world instances of scene graphs. 
+            Given a question (2), the agent alternates between reasoning over the question to identify a target object (3), planning a search strategy through memory retrieval and exploration (4), and updating its working memory (5), until it is ready to answer the question (6). 
+            Additionally, we introduce early stopping criteria using the notion of Value of Information to avoid retrieving memory that is unlikely to improve the next exploration action.
+        </p>
+
+        </div>
+        
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Long-term Active EQA Benchmark</h2>
+
+        <div class="column is-centered has-text-centered">
+          <img src="./static/images/benchmark.png"
+               class="interpolation-image"
+               alt="System Architecture."
+               style="width: 90%; height: auto;"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            We curate the first LA-EQA dataset and benchmark, consisting of 3 simulated and 2 real-world scenes. 
+            For each simulation scene, we generate 5--10 scene variations over multiple days, reflecting changes caused by common routines. 
+            For real-world scenes, we collected 11 trajectories (30--60 mins) in an industrial site and an office environment over a 6-month period. 
+          </p>
+
+          <p>We categorize the questions based on their required temporal reasoning to capture different aspects of long-term scene understanding:
+          <ol>
+            <li><b>Past questions</b> pertain to a specific event observed in a single past trajectory.</li>
+            <li><b>Present questions</b> require only exploration of the current environment.</li>
+            <li><b>Multi-past questions</b> involve synthesizing information from multiple past trajectories (e.g., “What do we usually eat for breakfast?”).</li>
+            <li><b>Past-present questions</b> require reasoning over both historical memory and the current scene (e.g., “Are we missing anything we usually have for breakfast?”).</li>
+            <li><b>Past-present-future questions</b> involve predicting future outcomes based on both past and present observations (e.g., “When do you think we will run out of apples for breakfast?”).</li>
+          </ol>
+          </p>
+
+
+          <!-- <p>
+          We categorize the questions based on their required temporal reasoning to capture different aspects of long-term scene understanding:
+          1) <b>Past questions</b> pertain to a specific event observed in a single past trajectory.  
+          2) <b>Present questions</b> require only exploration of the current environment.  
+          3) <b>Multi-past questions</b> involve synthesizing information from multiple past trajectories (e.g., “What do we usually eat for breakfast?”).  
+          4) <b>Past-present questions</b> require reasoning over both historical memory and the current scene (e.g., “Are we missing anything we usually have for breakfast?”).  
+          5) <b>Past-present-future questions</b> involve predicting future outcomes based on both past and present observations (e.g., “When do you think we will run out of apples for breakfast?”).
+          </p> -->
+          <p>
+          We curated 150 questions, which uniformly cover the question types. The questions were generated by seven people to ensure the diversity of the questions.
+          <p>
+            
+
 
         </div>
         
